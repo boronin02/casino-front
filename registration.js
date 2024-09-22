@@ -25,9 +25,9 @@ function handleClickOutside(event) {
 function handleRegister() {
     const dataToSend = {
         name: regNameNode.value,
-        //login: regLoginNode.value,
+        login: regLoginNode.value,
         password: regPasswordNode.value,
-        //password_again: regPasswordAgainNode.value,
+        password_again: regPasswordAgainNode.value,
     };
 
     fetch('http://127.0.0.1:5000/register', {
