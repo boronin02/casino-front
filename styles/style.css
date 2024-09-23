@@ -1,0 +1,13 @@
+@import '/styles/registration.css';
+@import '/styles/header.css';
+
+body {
+    font-family: "Manrope", sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    background-color: #fff;
+}

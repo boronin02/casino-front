@@ -1,0 +1,48 @@
+.header__content {
+    margin: 0 auto;
+    margin-left: 125px;
+    margin-right: 125px;
+    align-items: center;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    gap: 548px;
+}
+
+.header__content-right {
+    align-items: center;
+    display: flex;
+    gap: 37px;
+}
+
+.button__registration {
+    width: 225px;
+    height: 50px;
+    border-radius: 22px;
+    border: none;
+    text-decoration: none;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.button__registration-text {
+    color: #fff;
+}
+
+.header__content-left-text {
+    font-size: 48px;
+}
+
+.header__content-right-text {
+    cursor: pointer;
+}
+
+.header__content-right-text,
+.button__registration-text {
+    font-size: 32px;
+}
+
+.header__content-left-text,
+.header__content-right-text {
+    color: #000;
+}

@@ -1,66 +1,3 @@
-body {
-    font-family: "Manrope", sans-serif;
-}
-
-.container {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1400px;
-    background-color: #fff;
-}
-
-.header__content {
-    margin: 0 auto;
-    margin-left: 125px;
-    margin-right: 125px;
-    align-items: center;
-}
-
-.header__content {
-    margin-top: 35px;
-    display: flex;
-    justify-content: space-between;
-    gap: 548px;
-}
-
-.header__content-right {
-    align-items: center;
-    display: flex;
-    gap: 37px;
-}
-
-.button__registration {
-    width: 225px;
-    height: 50px;
-    border-radius: 22px;
-    border: none;
-    text-decoration: none;
-    background-color: #000;
-    cursor: pointer;
-}
-
-.button__registration-text {
-    color: #fff;
-}
-
-.header__content-left-text {
-    font-size: 48px;
-}
-
-.header__content-right-text {
-    cursor: pointer;
-}
-
-.header__content-right-text,
-.button__registration-text {
-    font-size: 32px;
-}
-
-.header__content-left-text,
-.header__content-right-text {
-    color: #000;
-}
-
 .registration {
     position: fixed;
     top: 0;
@@ -79,6 +16,7 @@ body {
 .registration_open {
     opacity: 1;
     visibility: visible;
+    backdrop-filter: blur(5px);
 }
 
 form {
@@ -97,7 +35,6 @@ form {
 }
 
 form * {
-    font-family: 'Poppins', sans-serif;
     color: #ffffff;
     letter-spacing: 0.5px;
     outline: none;
@@ -134,8 +71,21 @@ input {
     color: #e5e5e5;
 }
 
+.registration__password-error {
+    margin-top: 25px;
+    text-align: center;
+    visibility: hidden;
+    font-size: 18px;
+    font-weight: 700;
+    color: red;
+}
+
+.registration__password-error_open {
+    visibility: visible;
+}
+
 .button__register {
-    margin-top: 50px;
+    margin-top: 25px;
     width: 100%;
     background-color: #ffffff;
     color: #080710;

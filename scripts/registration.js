@@ -6,6 +6,8 @@ const regLoginNode = document.querySelector('.registration__login');
 const regPasswordNode = document.querySelector('.registration__password');
 const regPasswordAgainNode = document.querySelector('.registration__password-again');
 
+const regEasswordError = document.querySelector('.registration__password-error')
+
 const registerButtonNode = document.querySelector('.button__register');
 
 registrationButtonNode.addEventListener('click', toggleRegistration);
@@ -17,18 +19,28 @@ function toggleRegistration() {
 }
 
 function handleClickOutside(event) {
-    if (!event.target.closest('.registration__content')) {
+    if (!event.target.closest('.registration__form') && !event.target.closest('.button__register')) {
         registrationNode.classList.remove('registration_open');
     }
 }
 
+
 function handleRegister() {
+    event.preventDefault();
     const dataToSend = {
         name: regNameNode.value,
         login: regLoginNode.value,
         password: regPasswordNode.value,
         password_again: regPasswordAgainNode.value,
     };
+    console.log(regNameNode.value)
+    console.log(regLoginNode.value)
+    console.log(regPasswordNode.value)
+    console.log(regPasswordAgainNode.value)
+
+    if (!passwordVerification()) {
+        return
+    }
 
     fetch('http://127.0.0.1:5000/register', {
         method: 'POST',
@@ -53,3 +65,12 @@ function handleRegister() {
 //     regPasswordNode.value = "";
 //     regPasswordAgainNode.value = "";
 // }
+
+function passwordVerification() {
+    if (regPasswordNode.value !== regPasswordAgainNode.value) {
+        regEasswordError.classList.add('registration__password-error_open')
+        return false
+    }
+    regEasswordError.classList.remove('registration__password-error_open')
+    return true
+}
