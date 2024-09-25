@@ -5,6 +5,7 @@ const regNameNode = document.querySelector('.registration__name');
 const regLoginNode = document.querySelector('.registration__login');
 const regPasswordNode = document.querySelector('.registration__password');
 const regPasswordAgainNode = document.querySelector('.registration__password-again');
+const errorNode = document.querySelector('.error');
 
 const regEasswordError = document.querySelector('.registration__password-error')
 
@@ -25,7 +26,7 @@ function handleClickOutside(event) {
 }
 
 
-function handleRegister() {
+function handleRegister(event) {
     event.preventDefault();
     const dataToSend = {
         name: regNameNode.value,

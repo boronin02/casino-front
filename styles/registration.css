@@ -95,3 +95,7 @@ input {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.error {
+    font-size: 24px;
+}

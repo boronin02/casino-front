@@ -1,0 +1,80 @@
+.account {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    cursor: pointer;
+}
+
+.account_open {
+    opacity: 1;
+    visibility: visible;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.account__window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+}
+
+.account__window_open {
+    opacity: 1;
+    visibility: visible;
+    backdrop-filter: blur(5px);
+}
+
+h4 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: left;
+    color: white;
+}
+
+.account-window {
+    display: none;
+}
+
+.account_open {
+    display: flex;
+
+}
+
+.log-and-reg_close {
+    display: none;
+}
+
+.person__image {
+    width: 50px;
+    height: 50px;
+}
+
+.account-name {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.account__login-text,
+.account__password-text {
+    color: white;
+}
+
+.account__form h3 {
+    margin-bottom: 30px;
+}
+
+.account__login-text {
+    margin-bottom: 20px;
+}

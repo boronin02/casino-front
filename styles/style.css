@@ -1,5 +1,7 @@
 @import '/styles/registration.css';
 @import '/styles/header.css';
+@import '/styles/login.css';
+@import '/styles/account.css';
 
 body {
     font-family: "Manrope", sans-serif;

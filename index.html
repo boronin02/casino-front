@@ -22,16 +22,34 @@
                     </p>
                 </div>
                 <div class="header__content-right">
-                    <p class="header__content-right-text">
-                        войти
-                    </p>
-                    <button class="button__registration">
-                        <p class="button__registration-text">
-                            регистрация
+                    <div class="log-and-reg">
+                        <p class="header__content-right-text">
+                            войти
                         </p>
-                    </button>
+                        <button class="button__registration">
+                            <p class="button__registration-text">
+                                регистрация
+                            </p>
+                        </button>
+                    </div>
+
+                    <div class="account">
+                        <img class="person__image" src="person.png" alt="">
+                        <p class="account-name">
+
+                        </p>
+                    </div>
                 </div>
             </div>
+
+            <div class="js-account__window account__window">
+                <form class="account__form">
+                    <h3>Аккаунт</h3>
+                    <h4>Логин: <span class="account__login-text"></span></h4>
+                    <h4>Пароль: <span class="account__password-text"></span></h4>
+                </form>
+            </div>
+
             <div class="js-registration registration">
                 <div class="registration__content">
                     <form class="registration__form">
@@ -52,17 +70,42 @@
                         <button class="button__register">Зарегистрироваться</button>
 
                         <div class="registration__password-error">Пароли не совпадают</div>
+                        <div class="error" style="color: red;"></div>
                     </form>
 
                 </div>
             </div>
+            <div class="js-login login">
+                <div class="login__content">
+                    <form class="login__form">
+                        <h3>Вход</h3>
 
+                        <!-- <label for="username">Username</label>
+                        <input class="login__name" type="text" placeholder="Username..."> -->
+
+                        <label for="username">Login</label>
+                        <input class="login__login" type="text" placeholder="чёто...">
+
+                        <label for="password">Password</label>
+                        <input class="login__password" type="password" placeholder="Password...">
+
+                        <!-- <label for="password">Password</label>
+                        <input class="login__password-again" type="password" placeholder="Password..."> -->
+
+                        <button class="button__login">Войти</button>
+
+                        <div class="login__password-error registration__password-error">Пароли не совпадают</div>
+
+                    </form>
+                </div>
+            </div>
         </div>
         </div>
     </header>
     <script src="/scripts/index.js"></script>
     <script src="/scripts/registration.js"></script>
     <script src="/scripts/login.js"></script>
+    <script src="/scripts/account.js"></script>
 </body>
 
 </html>
