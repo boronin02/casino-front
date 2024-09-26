@@ -34,10 +34,6 @@ function handleRegister(event) {
         password: regPasswordNode.value,
         password_again: regPasswordAgainNode.value,
     };
-    console.log(regNameNode.value)
-    console.log(regLoginNode.value)
-    console.log(regPasswordNode.value)
-    console.log(regPasswordAgainNode.value)
 
     if (!passwordVerification()) {
         return
@@ -53,9 +49,16 @@ function handleRegister(event) {
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
+            if (data.status === 'error') {
+                errorNode.innerText = `Пользователь с таким логином уже существует`
+            }
+            if (data.status === 'success') {
+                registrationNode.classList.remove('registration_open');
+            }
         })
         .catch(error => {
             console.error('Error:', error);
+
         });
 }
 

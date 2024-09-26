@@ -9,6 +9,8 @@ const logAndRegNode = document.querySelector('.log-and-reg');
 
 const accountName = document.querySelector('.account-name');
 
+const errorLogin = document.querySelector('.error-login')
+
 
 // Открытие окна логина при клике на кнопку
 loginButtonOpenNode.addEventListener('click', loginOpen);
@@ -44,17 +46,20 @@ loginButtonNode.addEventListener('click', function (event) {
     })
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             if (data.status === 'success') {
                 // Скрытие окна логина и показ аккаунта
                 loginNode.classList.remove('login_open');
                 logAndRegNode.classList.add('log-and-reg_close');
                 account.classList.add('account_open');
-                console.log(data)
+
+                userLogin = data.login.login
                 // Отображение логина пользователя
                 accountName.innerText = data.login.login;
                 userPassword = data.login.password
             } else {
                 console.error('Login failed:', data.message);
+                errorLogin.innerText = `Неправильный логин или пароль`
             }
         })
         .catch(error => {
