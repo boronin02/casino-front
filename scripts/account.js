@@ -2,6 +2,7 @@ const account = document.querySelector('.account');
 const accountWindow = document.querySelector('.js-account__window');
 const accountIdText = document.querySelector('.account__id-text')
 const accountLoginText = document.querySelector('.account__login-text');
+const accountNameText = document.querySelector('.account__name-text')
 const accountPasswordText = document.querySelector('.account__password-text');
 const accountDataText = document.querySelector('.account__data-text')
 
@@ -25,8 +26,9 @@ account.addEventListener('click', function () {
         .then(data => {
             if (data.status === 'success') {
                 accountIdText.innerText = data.account.id
-                accountLoginText.innerText = data.account.name
-                accountPasswordText.innerText = data.account.login
+                accountLoginText.innerText = data.account.login
+                accountNameText.innerText = data.account.name
+                accountPasswordText.innerText = '*****'
                 accountDataText.innerText = data.account.created_date
             } else {
                 console.error('Ошибка:', data.message);

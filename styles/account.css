@@ -1,17 +1,17 @@
 .account {
     visibility: hidden;
     opacity: 0;
+    display: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     cursor: pointer;
 }
 
 .account_open {
+    user-select: none;
     opacity: 1;
     visibility: visible;
-    backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
-    gap: 15px;
 }
 
 .account__window {
@@ -23,16 +23,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
     visibility: hidden;
     z-index: 10;
 }
 
+.account__form {
+    height: 570px;
+    width: 400px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 41%;
+    left: 76%;
+    box-shadow: none;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 50px 35px;
+}
+
 .account__window_open {
     opacity: 1;
     visibility: visible;
-    backdrop-filter: blur(5px);
 }
 
 h4 {
@@ -59,11 +71,18 @@ h4 {
 .person__image {
     width: 50px;
     height: 50px;
+    margin-right: 15px;
+}
+
+.account__image-arrow {
+    width: 20px;
+    height: 20px;
 }
 
 .account-name {
     font-size: 36px;
     font-weight: 700;
+    margin-right: 7px;
 }
 
 .account__login-text,
@@ -77,4 +96,17 @@ h4 {
 
 .account__login-text {
     margin-bottom: 20px;
+}
+
+.account__edit-button,
+.account__exit-button {
+    margin-top: 18px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
 }

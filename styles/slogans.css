@@ -1,0 +1,34 @@
+body {
+    overflow-x: hidden;
+}
+
+.slogans {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.slogans p {
+    padding: 3px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* @keyframes move {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+} */
+
+.slogans {
+    animation: move 15s linear infinite;
+}

@@ -1,7 +1,9 @@
+header {
+    margin-bottom: 35px;
+}
+
 .header__content {
     margin: 0 auto;
-    margin-left: 125px;
-    margin-right: 125px;
     align-items: center;
     margin-top: 35px;
     display: flex;
@@ -12,7 +14,6 @@
 .header__content-right {
     align-items: center;
     display: flex;
-    gap: 37px;
 }
 
 .button__registration {
@@ -31,6 +32,8 @@
 
 .header__content-left-text {
     font-size: 48px;
+    user-select: none;
+    text-decoration: none;
 }
 
 .header__content-right-text {

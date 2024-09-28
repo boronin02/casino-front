@@ -2,6 +2,10 @@
 @import '/styles/header.css';
 @import '/styles/login.css';
 @import '/styles/account.css';
+@import '/styles/edit-account.css';
+@import '/styles/gallery.css';
+@import '/styles/slogans.css';
+@import '/styles/slot.css';
 
 body {
     font-family: "Manrope", sans-serif;
